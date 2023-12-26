@@ -12,11 +12,4 @@ const renderApp = () => {
         </React.StrictMode>
     );
 };
-
-fetch('http://localhost:3002/render-app')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data.message);
-        renderApp();
-    })
-    .catch(error => console.error('Error triggering rendering:', error));
+renderApp();
